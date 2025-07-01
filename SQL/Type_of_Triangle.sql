@@ -1,8 +1,8 @@
-select *,
+select
 case 
-when a=b and b=c and a=b then 'Equilateral' 
-when a=b or b=c or a=c then 'Isosceles'
-when a+b<=c or b+c<=a or a+c<=b then 'Not A Triangle'
+when a+b<=c or a+c<=b or b+c<=a then 'Not A Triangle' 
+when a=b and a=c and b=c then 'Equilateral'
+when a=b or a=c or b=c then 'Isosceles' /*some input have two same side but not triangle e.g. 20 20 40*/
 else 'Scalene'
 end
 from TRIANGLES 
