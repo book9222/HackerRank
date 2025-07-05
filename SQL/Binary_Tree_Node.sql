@@ -1,6 +1,3 @@
-/*
-Enter your query here.
-*/
 SELECT N,
 CASE
     WHEN P is NULL THEN 'Root'
