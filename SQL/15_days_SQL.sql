@@ -3,15 +3,17 @@ select
 from
     (
         select
-            S.submission_date,
-            S.hacker_id,
-            count(S.submission_id) as sub_count
+            submission_date,
+            hacker_id,
+            count(submission_id) as count_sub
         from
             Submissions
+            -- where submission_date like '2016-03-03'
         group by
             submission_date,
             hacker_id
         order by
             submission_date,
+            count_sub desc,
             hacker_id
-    ) as sub_counts_table
+    ) AS sub_counts_table AS
