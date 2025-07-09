@@ -22,12 +22,12 @@ def getTotalX(a, b):
     for i in range(max(a), min(b)+1):
         # print("i", i)
         between_sets = True
-        for j in a:
+        for j in a: # Check if i is a multiple of all elements in a if not break
             if i % j != 0:
                 # print("j--->", j)
                 between_sets = False
                 break
-        for j in b:
+        for j in b: # Check if all elements in b are multiples of i if not break
             if j % i != 0:
                 between_sets = False
                 break
