@@ -52,3 +52,16 @@
             
 
 
+if __name__ == '__main__':
+    s = input()
+    
+    res = any(i.isalnum() for i in s)
+    print(res)
+    res = any(i.isalpha() for i in s)
+    print(res) 
+    res = any(i.isdigit() for i in s)
+    print(res)
+    res = any(i.islower() for i in s)
+    print(res)
+    res = any(i.isupper() for i in s)
+    print(res)
